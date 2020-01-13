@@ -1,0 +1,70 @@
+.padded-content {
+  padding: 15px 0;
+}
+
+.contact {
+  background: #fcfcfc;
+  padding: 50px 0 0 0;
+
+  &__content {
+    display: flex;
+    @media (max-width: 680px) {
+      flex-direction: column-reverse;
+    }
+  }
+
+  &__link {
+    color: #333;
+    &:hover,
+    &:active {
+      color: #d8812d;
+    }
+  }
+
+  &__contacts {
+    .padded-content;
+
+    @media (max-width: 680px) {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__contact-item {
+    margin-bottom: 25px;
+    min-width: 210px;
+  }
+
+  &__text {
+    white-space: nowrap;
+  }
+
+  &__main {
+    margin-right: 50px;
+
+    @media (max-width: 680px) {
+      margin-right: 0;
+    }
+  }
+
+  &__mail {
+    .padded-content;
+  }
+
+  &__complain {
+    .padded-content;
+  }
+
+  &__map {
+    height: 360px;
+    width: 100%;
+  }
+
+  &__small {
+    font-size: 12px;
+    color: #83c78e;
+    margin-top: 5px;
+    margin-bottom: 0px;
+  }
+}

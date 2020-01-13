@@ -1,0 +1,70 @@
+<div class="contact">
+  <section>
+    <div class="contact__content">
+      <div class="contact__main">
+        <div class="contact__mail">
+          <h4><i class="jollyicon-mail"></i>&nbsp;&nbsp;&nbsp;HÖR AV DIG TILL OSS</h4>
+          Om du har frågor om hur det fungerar på Kossan, funderingar på verksamheten eller kanske skulle vilja jobba hos oss - tveka då inte att höra av dig så återkommer vi så fort vi kan.<br><br>
+
+          <p class="contact__small">Köansvarig</p>
+          Maria
+          <br><a href="mailto:koansvarig@kossan.net">koansvarig@kossan.net</a> | <a href="tel:+46736923582">0736-92 35 82</a><br><br>
+          <p class="contact__small">Förskolechef</p>
+          Elise
+          <br><a href="mailto:forskolechef@kossan.net">forskolechef@kossan.net</a> <!--| <a href="tel:+46769494037">0769-49 40 37</a>--><br><br>
+          <p class="contact__small">Förskolan</p>
+          Personalen
+          <br><a href="mailto:kossan@kossan.net">kossan@kossan.net</a> | <a href="tel:+46707554068">0707-55 40 68</a><br><br>
+          <p class="contact__small">Ordförande</p>
+          Elin<br><a href="mailto:ordforande@kossan.net">ordforande@kossan.net</a> | <a href="tel:+46736352743">0736-35 27 43</a><br>
+        </div>
+        <div class="contact__complain">
+          <h4><i class="jollyicon-chat"></i>&nbsp;&nbsp;&nbsp;KLAGOMÅL</h4>
+          Ifall du som vårdnadshavare har klagomål, synpunkter eller önskemål på förskolan eller den pedagogiska verksamheten, vill vi i styrelsen gärna veta det. Vi ser det som ett tillfälle att förbättra verksamheten.<br><br>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSfj_5hDcSNazWU0z-xa6qQBFyj3C3ErIDpMMBeIAqAK_kXCoQ/viewform" target="_blank">-&gt; Formulär för klagomål</a>
+        </div>
+      </div>
+      <div class="contact__contacts">
+        <div class="contact__contact-item">
+          <h4><i class="jollyicon-home"></i>&nbsp;&nbsp;&nbsp;Address</h4>
+          <div class="contact__text">
+            Föräldrakooperativet Kossan<br>
+            Lavendelvägen 11<br>
+            227 38 LUND<br>
+          </div>
+        </div>
+        <div class="contact__contact-item">
+          <h4><i class="jollyicon-time-clock"></i>&nbsp;&nbsp;&nbsp;Öppettider</h4>
+          <div class="contact__text">
+              Måndag - Fredag<br>
+              7.30 - 16.30
+          </div>
+        </div>
+        <div class="contact__contact-item">
+          <h4><i class="jollyicon-phone"></i>&nbsp;&nbsp;&nbsp;Telefonnummer</h4>
+          <div class="contact__text">
+              <a href="tel:+46707-55 40 68" class="contact__link">0707-55 40 68</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <agm-map
+    class="contact__map"
+    [latitude]="lat"
+    [longitude]="lng"
+    [zoom]="14"
+    >
+    <agm-marker
+      [latitude]="lat"
+      [longitude]="lng"
+      [title]="'Föräldrakooperativet Kossan'"
+    >
+      <agm-info-window [isOpen]="true">
+        <strong>Föräldrakooperativet Kossan</strong><br>
+        Lavendelvägen 11<br>
+        227 38 LUND
+      </agm-info-window>
+    </agm-marker>
+  </agm-map>
+</div>

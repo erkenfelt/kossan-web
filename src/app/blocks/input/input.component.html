@@ -1,0 +1,10 @@
+<fieldset class="input">
+  <input
+    name="{{ name }}"
+    type="text"
+    [(ngModel)]="value"
+    required
+  >
+  <hr class="input__hr" [class.input__hr--error]="error">
+  <label class="input__label" [class.input__label--error]="error">{{ label }}</label>
+</fieldset>

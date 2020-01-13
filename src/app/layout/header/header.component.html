@@ -1,0 +1,46 @@
+<header class="header">
+  <section>
+    <div class="header__top">
+      <div class="header__logo-container">
+        <a routerLink="/">
+          <img src="/assets/images/kossan+logo.png" class="header__logo" alt="Kossan">
+        </a>
+      </div>
+      <div class="header__links">
+        <a href="https://www.facebook.com/ForaldrakooperativetKossan/" target="_blank" class="header__link--facebook"><i class="jollyicon-facebook"></i></a>
+        <a href="https://www.instagram.com/forskolankossanlund/" target="_blank" class="header__link--instagram"><i class="jollyicon-instagram"></i></a>
+        <a href="https://www.youtube.com/channel/UCp53sQsOPvBH1V3dOOh-isg/" target="_blank" class="header__link--youtube"><i class="jollyicon-youtube"></i></a>
+      </div>
+      <div class="header__nav-container-smartphone">
+        <button
+          type="button"
+          class="c-hamburger c-hamburger--htx"
+          [class.c-hamburger--htx--active]="menuOpened"
+          (click)="onMenuClicked()"
+          >
+          <span>navigera</span>
+        </button>
+      </div>
+    </div>
+  </section>
+  <div class="header__nav-container">
+    <section>
+      <nav class="header__nav">
+        <a class="header__nav-item" routerLink="/hem" routerLinkActive="header__nav-item--active">Hem</a>
+        <a class="header__nav-item" routerLink="/forskola" routerLinkActive="header__nav-item--active">Förskola</a>
+        <a class="header__nav-item" routerLink="/kooperativ" routerLinkActive="header__nav-item--active">Kooperativ</a>
+        <a class="header__nav-item" routerLink="/personal" routerLinkActive="header__nav-item--active">Personal</a>
+        <a class="header__nav-item" routerLink="/kontakt" routerLinkActive="header__nav-item--active">Kontakt</a>
+        <a class="header__nav-item" routerLink="/intresseanmalan" routerLinkActive="header__nav-item--active">Intresseanmälan</a>
+      </nav>
+    </section>
+  </div>
+  <nav [@slideInAnimation] *ngIf="menuOpened" class="header__nav-smartphone">
+    <a class="header__nav-item-smartphone" routerLink="/hem" routerLinkActive="header__nav-item-smartphone--active">Hem</a>
+    <a class="header__nav-item-smartphone" routerLink="/forskola" routerLinkActive="header__nav-item-smartphone--active">Förskola</a>
+    <a class="header__nav-item-smartphone" routerLink="/kooperativ" routerLinkActive="header__nav-item-smartphone--active">Kooperativ</a>
+    <a class="header__nav-item-smartphone" routerLink="/personal" routerLinkActive="header__nav-item-smartphone--active">Personal</a>
+    <a class="header__nav-item-smartphone" routerLink="/kontakt" routerLinkActive="header__nav-item-smartphone--active">Kontakt</a>
+    <a class="header__nav-item-smartphone" routerLink="/intresseanmalan" routerLinkActive="header__nav-item-smartphone--active">Intresseanmälan</a>
+  </nav>
+</header>

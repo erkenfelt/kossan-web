@@ -1,0 +1,13 @@
+<div class="card" [class.card--horizontal]="horizontal" [class.card--flat]="flat">
+  <div class="card__content">
+    <ng-content></ng-content>
+  </div>
+  <div class="card__text-container">
+    <h4 class="card__header">{{ header }}</h4>
+    <div *ngIf="subheader" class="card__subheader">{{ subheader }}</div>
+    <p class="card__text">{{ text }}</p>
+    <div class="card__email" *ngIf="email">
+      <a href="mailto:{{email}}"><i class="jollyicon-email"></i>&nbsp;SKICKA E-MAIL</a>
+    </div>
+  </div>
+</div>

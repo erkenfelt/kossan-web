@@ -1,0 +1,48 @@
+.available {
+  background: #F79A41;
+  text-align: center;
+  padding: 10px 0;
+  padding-top: 20px;
+  & h4 {
+    color: #fcfcfc;
+    margin: 0;
+  }
+
+  & a {
+    color: #fcfcfc;
+    &:hover {
+      color: rgb(109, 68, 30);
+    }
+  }
+}
+
+.home{
+  background: #fcfcfc;
+
+  &__features {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 20px 0;
+  }
+
+  &__feature {
+    padding: 10px 15px;
+    max-width: 30%;
+
+    @media screen and (max-width: 950px) {
+      max-width: 40%;
+    }
+
+    @media screen and (max-width: 600px) {
+      max-width: 90%;
+    }
+  }
+
+  &__sustainability {
+    margin: 0 auto;
+    max-width: 640px;
+    text-align: center;
+    padding: 20px 0;
+  }
+}

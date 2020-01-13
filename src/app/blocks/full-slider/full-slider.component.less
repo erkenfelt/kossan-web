@@ -1,0 +1,72 @@
+.slider__image {
+  position: absolute;
+  top: 0;
+
+  /* Full height & width */
+  height: 100%;
+  width: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #fff;
+}
+
+.slider{
+  position: relative;
+  overflow: hidden;
+  height: 40%;
+
+  @media (max-width: 600px) {
+    height: 90%;
+  }
+
+  &__image-1 {
+    .slider__image;
+    /* The image used */
+    background-image: url("/assets/images/kossan-bg-1.jpg");
+  }
+
+  &__image-2 {
+    .slider__image;
+    /* The image used */
+    background-image: url("/assets/images/IMG_2807.jpg");
+  }
+
+  &__image-3 {
+    .slider__image;
+    /* The image used */
+    background-image: url("/assets/images/IMG_9788.jpg");
+  }
+
+  &__logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    animation: 1500ms ease-out 0s 1 slideInFromTop;
+    animation-fill-mode: forwards;
+  }
+
+  &__logo {
+    width: 75%;
+    max-width: 250px;
+  }
+
+}
+
+@keyframes slideInFromTop {
+  0% {
+    opacity: 0;
+    transform: translateY(-55px);
+  }
+  50% {
+    opacity: 0;
+    transform: translateY(-55px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(-30px);
+  }
+}

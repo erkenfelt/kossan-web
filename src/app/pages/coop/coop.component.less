@@ -1,0 +1,49 @@
+.coop-image {
+  box-shadow: 0 1px 3px rgba(0,0,0,.25);
+  min-width: 270px;
+  max-width: 270px;
+  min-height: 270px;
+  max-height: 270px;
+  width: 270px;
+  height: 270px;
+  display: flex;
+  flex: 0;
+
+  @media (max-width: 700px) {
+    margin: 0;
+    margin-bottom: 25px;
+  }
+}
+
+.coop {
+  background: #fcfcfc;
+  padding: 50px 0;
+
+  &__engagement {
+    padding: 25px 0;
+    display: flex;
+    align-items: center;
+
+    @media (max-width: 700px) {
+      flex-direction: column;
+    }
+  }
+
+  &__engagement-image {
+    .coop-image;
+    margin-right: 25px;
+  }
+
+  &__friends {
+    padding: 25px 0;
+    display: flex;
+    @media (max-width: 700px) {
+      flex-direction: column-reverse;
+    }
+  }
+
+  &__friends-image {
+    .coop-image;
+    margin-left: 25px;
+  }
+}

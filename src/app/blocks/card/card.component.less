@@ -1,0 +1,51 @@
+.card {
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(0,0,0,.25);
+  min-width: 280px;
+  max-width: 440px;
+  margin: 15px 10px;
+
+  @media (max-width: 980px) {
+    max-width: 380px;
+  }
+
+  @media (max-width: 850px) {
+    max-width: 320px;
+  }
+
+  @media (max-width: 730px) {
+    max-width: 730px;
+  }
+
+  &--horizontal {
+    display: flex;
+  }
+
+  &--flat {
+    background: transparent;
+    box-shadow: 0 0 0 transparent;
+  }
+
+  &__header {
+    padding: 10px 10px 5px 10px;
+    margin: 0;
+  }
+
+  &__subheader {
+    margin-top: -5px;
+    font-size: 14px;
+    padding-left: 10px;
+    color: #858585;
+    color: #F79A41;
+  }
+
+  &__text {
+    padding: 5px 10px 10px 10px;
+    margin: 0;
+  }
+
+  &__email {
+    font-family: 'Just Another Hand';
+    padding: 5px 10px 10px 10px;
+  }
+}

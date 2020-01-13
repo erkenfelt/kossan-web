@@ -1,0 +1,109 @@
+.interest {
+  background: #fcfcfc;
+
+  &__top-border {
+    background: url(/assets/images/achievements-bg.jpg);
+    height: 210px;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media (max-width: 780px) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__failed-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+  }
+
+  &__success-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 260px;
+    @media (max-width: 780px) {
+      min-height: 456px;
+    }
+  }
+
+  &__sending-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 456px;
+  }
+
+  &__result-header {
+    font-size: 24px;
+  }
+
+  &__result-message {
+    text-align: center;
+  }
+
+  &__responsive-container {
+    display: flex;
+    padding-bottom: 50px;
+
+    @media (max-width: 780px) {
+      flex-direction: column;
+    }
+  }
+
+  &__info {
+    flex-basis: 50%;
+    margin-right: 20px;
+    @media (max-width: 780px) {
+      flex-basis: 100%;
+      margin-right: 0;
+    }
+  }
+
+  &__form-container {
+    flex-basis: 50%;
+    margin-left: 20px;
+    @media (max-width: 780px) {
+      margin-left: 0;
+      flex-basis: 100%;
+    }
+  }
+
+  &__form {
+    width: 100%;
+  }
+
+  &__button {
+    outline: none;
+    border: 2px solid #333;
+    background: transparent;
+    color: #333;
+    padding: 10px;
+    text-transform: uppercase;
+    cursor: pointer;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: background 225ms ease-in-out;
+
+    &:hover, &:active {
+      background: #eee;
+    }
+
+    &:active {
+      box-shadow: none;
+    }
+  }
+
+  &__quick-link {
+    color: #333;
+    &:hover, &:active {
+      color: #d8812d;
+    }
+  }
+}

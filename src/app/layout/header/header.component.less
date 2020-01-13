@@ -1,0 +1,217 @@
+:host {
+  display: block;
+}
+
+.header__link {
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  margin-left: 5px;
+  transition: background 225ms ease-in-out;
+
+  &:hover {
+    background: #333;
+  }
+}
+
+.header {
+  /*background: #83c78e url("/assets/images/bg-header.png");*/
+  background: #fff;
+  border-bottom: 1px solid #ccc;
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    height: 40px;
+    margin: 20px 0;
+  }
+
+  &__links {
+    display: flex;
+    align-items: center;
+    @media (max-width: 600px) {
+      display: none;
+    }
+  }
+
+  &__link {
+    &--facebook {
+      .header__link;
+      background: #405A9B;
+    }
+
+    &--instagram {
+      .header__link;
+      background: #587FA5;
+    }
+
+    &--youtube {
+      .header__link;
+      background: #F42E22;
+    }
+  }
+
+  &__nav-container {
+    /* background: #a8deb1; */
+    position: relative;
+    z-index: 100;
+    padding: 7px 0;
+
+    @media (max-width: 600px) {
+      display: none;
+    }
+  }
+
+  &__nav-container-smartphone {
+    display: none;
+    height: 25px;
+    @media (max-width: 600px) {
+      display: flex;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    margin: -7px 0;
+  }
+
+  &__nav-item {
+    font-family: 'Just Another Hand';
+    font-size: 20px;
+    display: inline-block;
+    color: #333;
+    padding: 6px 12px;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: 1px solid transparent;
+    transition: all 225ms ease-in-out;
+
+    &:hover {
+      color: #83c78e;
+    }
+
+    &--active {
+      color: #000;
+      background: #fff;
+      transition: all 225ms ease-in-out;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    
+      &:hover {
+        background: #fff;
+        color: #000;
+      }
+    }
+  }
+
+  &__nav-smartphone {
+    background: #fff;
+    box-shadow: 0 1px 3px rgba(0,0,0,.25);
+    position: absolute;
+    z-index: 100;
+    top: 83px;
+    left: 0;
+    right: 0;
+  }
+
+  &__nav-item-smartphone {
+    font-family: 'Just Another Hand';
+    font-size: 30px;
+    display: block;
+    color: #333;
+    padding: 10px 25px;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: 1px solid transparent;
+    transition: all 225ms ease-in-out;
+
+    &:hover {
+      color: #83c78e;
+    }
+
+    &--active {
+      color: #83c78e;
+    }
+  }
+}
+
+.c-hamburger {
+  position: relative;
+  overflow: hidden;
+  margin: 5px 0 0 0;
+  padding: 0;
+  width: 72px;
+  height: 72px;
+  font-size: 0;
+  text-indent: -9999px;
+  box-shadow: none;
+  border-radius: none;
+  border: none;
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.c-hamburger span {
+  position: absolute;
+  top: 32px;
+  left: 18px;
+  right: 18px;
+  height: 5px;
+  background: #1f1e1d;
+}
+
+.c-hamburger span::before,
+.c-hamburger span::after {
+  position: absolute;
+  display: block;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background-color: #1f1e1d;
+  content: "";
+}
+
+.c-hamburger span::before {
+  top: -15px;
+}
+
+.c-hamburger span::after {
+  bottom: -15px;
+}
+
+.c-hamburger--htx {
+  background-color: transparent;
+}
+
+.c-hamburger--htx span {
+  transition: background 0.3s 0.3s;
+}
+
+.c-hamburger--htx span::before,
+.c-hamburger--htx span::after {
+  transition: top 0.3s, bottom 0.3s, transform 0.3s 0.3s;
+}
+
+.c-hamburger--htx--active span {
+  background: none;
+}
+
+.c-hamburger--htx--active span::before {
+  top: 0;
+  transform: rotate(45deg);
+}
+
+.c-hamburger--htx--active span::after {
+  bottom: 0;
+  transform: rotate(-45deg);
+}

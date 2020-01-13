@@ -1,0 +1,43 @@
+<div class="interest">
+  <div class="interest__top-border">
+    <div class="interest__top-text">
+      <h1>INTRESSEANMÄLAN</h1>
+    </div>
+  </div>
+  <section>
+    <div class="interest__responsive-container">
+      <div class="interest__info">
+        <p>Är du intresserad av att ställa ditt eller dina barn i kö till Kossan, eller vill du bara veta mer om vad det innebär att ha sitt barn hos oss? Då vill vi gärna höra av dig!</p>
+        <p>Fyll i uppgifterna så hör vi av oss så fort vi kan.</p>
+        <div class="interest__quick-info">
+          <p><a href="mailto:kossan@kossan.net" class="interest__quick-link"><i class="jollyicon-mail"></i>&nbsp;&nbsp;kossan@kossan.net</a></p>
+          <p><a href="tel:+46707554068" class="interest__quick-link"><i class="jollyicon-mobile"></i>&nbsp;&nbsp;0707-55 40 68</a></p>
+          <p><a href="https://www.google.se/maps/place/F%C3%B6r%C3%A4ldrakooperativet+Kossan/@55.7191941,13.1788558,17z/data=!3m1!4b1!4m5!3m4!1s0x4653bd801c736297:0xe1c950eadc3794cd!8m2!3d55.7191941!4d13.1810445" target="_blank" class="interest__quick-link"><i class="jollyicon-location"></i>&nbsp;&nbsp;Lavendelvägen 11, Lund</a></p>
+          <p class="interest__quick-link"><i class="jollyicon-time-clock"></i>&nbsp;&nbsp;Måndag - Fredag: 7.30 - 16.30</p>
+        </div>
+      </div>
+      <div class="interest__form-container">
+        <div *ngIf="emailFailed" [@fadeIn] class="interest__failed-container">
+          <h1 class="interest__result-header">Tyvärr lyckades vi inte skicka ditt meddelande!</h1>
+          <div class="interest__result-message">Försök gärna igen eller hör av dig direkt till <a href="mailto:koansvarig@kossan.net">koansvarig@kossan.net</a></div>
+        </div>
+        <div *ngIf="emailSent" [@fadeIn] class="interest__success-container">
+          <h1 class="interest__result-header">Tack för din intresseanmälan!</h1>
+          <div class="interest__result-message">Vi hör av oss så snart vi kan</div>
+        </div>
+        <div *ngIf="sendingEmail" class="interest__sending-container">
+          <h1 class="interest__result-header">Skickar...</h1>
+        </div>
+        <form *ngIf="!emailSent && !sendingEmail" class="interest__form" #form="ngForm" (ngSubmit)="sendEmail()">
+          <app-input [label]="'Namn'" [name]="'name'" [error]="nameError" [(value)]="message.name"></app-input>
+          <app-input [label]="'E-post'" [name]="'email'" [error]="emailError" [(value)]="message.email"></app-input>
+          <app-input [label]="'Namn på barn'" [name]="'childname'" [(value)]="message.childName"></app-input>
+          <app-input [label]="'Födelseår'" [name]="'birthyear'" [(value)]="message.birthYear"></app-input>
+          <app-input [label]="'När vill ni börja'" [name]="'startdate'" [(value)]="message.whenToStart"></app-input>
+          <app-input [label]="'Meddelande'" [name]="'message'" [(value)]="message.message"></app-input>
+          <button class="interest__button" type="submit">Skicka</button>
+        </form>
+      </div>
+    </div>
+  </section>
+</div>
