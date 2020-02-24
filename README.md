@@ -10,6 +10,19 @@ https://nodejs.org/en/download/
 The project uses yarn to download and install packages. Download and install yarn.
 https://classic.yarnpkg.com/en/docs/install#windows-stable
 
+Since this is an angular project we use angular cli to do cool stuff.
+Run `npm install -g @angular/cli` to install it globally.
+
+
+## Project structure
+
+src
+    /app
+        /blocks - Reusable components used in the application
+        /layout - Header and footer
+        /pages - Each page have its' own folder
+    /assets - Images, fonts, contact-form script, icons, etc.
+
 ## Using git
 
 The project uses git as versioning system, and if you like that you could use it as well. 
