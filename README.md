@@ -10,6 +10,10 @@ https://nodejs.org/en/download/
 The project uses yarn to download and install packages. Download and install yarn.
 https://classic.yarnpkg.com/en/docs/install#windows-stable
 
+## Using git
+
+The project uses git as versioning system, and if you like that you could use it as well. 
+
 ## Development server
 
 Run `yarn` to install packages.
